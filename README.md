@@ -1,99 +1,186 @@
-# PRECRIPTO
+🩺 PRECRIPTO
 
-**Smart Health Center Doctor Appointment Booking System**
+Precripto is a full‑stack healthcare appointment and prescription management platform built using the MERN stack. It enables patients to book doctor appointments, doctors to manage schedules and prescriptions, and admins to control and monitor the entire system — all from dedicated dashboards.
 
-PRECRIPTO is a full-stack web application designed to simplify doctor appointment scheduling in health centers or clinics. It enables patients to easily book, manage, and pay for appointments online, while doctors and admins oversee schedules, patient records, and daily operations through intuitive dashboards.
-
----
-
-## 🚀 Overview
-
-PRECRIPTO offers a modern, scalable platform for managing medical appointments. Whether for small clinics, campus health centers, or multi-specialty practices, PRECRIPTO streamlines the entire process:
-
-- User authentication & secure role-based dashboards
-- Real-time appointment booking with slot availability
-- Integrated online payments
-- Responsive, modern user experience
-
-Built with the MERN stack (MongoDB, Express.js, React, Node.js), PRECRIPTO focuses on security, performance, and usability.
+This project was built as a team effort with a strong focus on real‑world healthcare workflows, scalability, and clean system architecture.
 
 ---
 
-## ✨ Features
-
-### 🩺 Patient Portal
-
-- Secure registration and login
-- Browse doctor profiles by specialty
-- Book appointments with preferred dates and time slots
-- View, cancel, and pay for appointments online
-- Manage personal profiles
-
-### 🛠️ Admin Panel
-
-- Manage doctors, appointments, and patient data
-- Cancel appointments and handle patient records
-- Access reports and key analytics via a powerful dashboard
-
-### 👨‍⚕️ Doctor Dashboard
-
-- View and manage upcoming appointments
-- Mark appointments as completed or cancelled
-- Update personal details, fees, and availability
-
-### 🌐 General Highlights
-
-- Fully responsive UI built with Tailwind CSS
-- Online payment processing via Razorpay
-- Secure data storage using MongoDB Atlas
-- Image handling with Cloudinary for profile pictures and documents
+👥 Team
+- Vikas A R
+- Sampreeth C H
+- Saroj Kumar Sah
+- Sanjan R
 
 ---
 
-## 🛠 Technologies Used
+🚀 Features
 
-### Frontend
+👤 Patient (Frontend)
+- User authentication (signup / login)  
+- Browse doctors by specialization  
+- Book & manage appointments  
+- Online payment integration using Razorpay  
+- View appointment history  
 
-- React
-- React Router
-- Tailwind CSS
-- Axios
-- react-toastify
+👨‍⚕️ Doctor Dashboard
+- Doctor authentication  
+- View scheduled appointments  
+- Mark appointments as completed or cancelled  
+- Manage availability  
 
-### Backend
-
-- Node.js
-- Express.js
-- Mongoose
-- bcrypt
-- jsonwebtoken (JWT)
-- Razorpay
-- Multer
-- Cloudinary
-- CORS
-- dotenv
-- Validator
-- Nodemon
-
-**Database:** MongoDB Atlas
-
-**Tools:** Git, GitHub, npm
+🛠️ Admin Dashboard
+- Admin authentication  
+- Add and manage doctors  
+- View all users and appointments  
+- Platform‑wide control and monitoring  
 
 ---
 
-## 🎯 Why PRECRIPTO?
+🧱 Tech Stack
 
-- Reduces waiting times and manual scheduling
-- Enhances patient convenience with online booking
-- Helps healthcare staff manage schedules efficiently
-- Secures sensitive medical and personal data
-- Provides insightful analytics for better decision-making
+Frontend & Admin  
+- React (Vite)  
+- React Router  
+- Context API  
+- Axios  
+- Tailwind CSS  
+
+Backend  
+- Node.js  
+- Express.js  
+- MongoDB Atlas  
+- Mongoose  
+- JWT Authentication  
+
+Other Services  
+- Cloudinary – Image uploads  
+- Razorpay – Online payments  
+- Render – Backend deployment  
+- Vercel – Frontend & Admin deployment  
 
 ---
 
-## 🤝 Contributing
+🗂️ Project Structure
+`
+PRECRIPTO/
+│
+├── frontend/     # Patient‑side application
+├── admin/        # Admin dashboard
+├── backend/      # Express server & APIs
+└── README.md
+`
 
-Contributions are welcome! Here’s how you can help:
+---
 
-1. **Fork** the repository
-2. Create a new branch:
+⚙️ Environment Variables
+
+Backend (backend/.env)  
+`
+MONGODB_URI=
+CLOUDINARY_NAME=
+CLOUDINARYAPIKEY=
+CLOUDINARYSECRETKEY=
+ADMIN_EMAIL=
+ADMIN_PASSWORD=
+JWT_SECRET=
+RAZORPAYKEYID=
+RAZORPAYKEYSECRET=
+CURRENCY=INR
+NODE_ENV=production
+PORT=4000
+`
+
+Frontend (frontend/.env)  
+`
+VITEBACKENDURL=
+VITERAZORPAYKEY_ID=
+`
+
+Admin (admin/.env)  
+`
+VITEBACKENDURL=
+`
+
+⚠️ Never commit .env files to GitHub. All secrets are configured in deployment platforms.
+
+---
+
+▶️ Running Locally
+
+1. Clone the repository  
+   `bash
+   git clone <repo-url>
+   cd PRECRIPTO
+   `
+2. Start Backend  
+   `bash
+   cd backend
+   npm install
+   npm start
+   `
+3. Start Frontend  
+   `bash
+   cd frontend
+   npm install
+   npm run dev
+   `
+4. Start Admin  
+   `bash
+   cd admin
+   npm install
+   npm run dev
+   `
+
+---
+
+🌐 Deployment (Vercel Setup)
+
+When deploying the frontend on Vercel:
+
+- Vercel Team: Vicky's projects  
+- Scope: Hobby  
+- Project Name: precripto  
+- Framework Preset: Vite  
+- Root Directory: frontend  
+- Build Command:  
+  `bash
+  vite build
+  `
+- Output Directory:  
+  `
+  dist
+  `
+- Install Command:  
+  `
+  npm install
+  `
+  (alternatively: yarn install, pnpm install, bun install)  
+
+Environment variables are configured directly in Vercel dashboard.
+
+---
+
+🎯 Key Highlights
+- Clean role‑based architecture (Patient / Doctor / Admin)  
+- Secure JWT‑based authentication  
+- Real‑time appointment status handling  
+- Payment workflow integration  
+- Scalable monorepo structure  
+
+---
+
+📌 Future Enhancements
+- Email & SMS notifications  
+- Doctor availability calendar  
+- Prescription PDF generation  
+- Analytics dashboard for admin  
+
+---
+
+📄 License
+This project is for educational and demonstration purposes.  
+
+Built with ❤️ by Team Vikas A R, Sampreeth C H, Saroj Kumar Sah & Sanjan R
+
+---
